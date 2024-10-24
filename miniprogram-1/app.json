@@ -1,0 +1,42 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/camera/camera",
+    "pages/photo_album/photo_album",
+    "pages/legend/legend",
+    "pages/know/know"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+
+  "tabBar": {
+      "color": "#a9b7b7",
+      "selectedColor": "#11cd6e",
+      "borderStyle": "black" ,
+      "list": [{
+        "selectedIconPath": "pages/images/home.png",
+        "iconPath": "pages/images/home.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "pages/images/legend.png",
+        "iconPath": "pages/images/legend.png",
+        "pagePath": "pages/legend/legend",
+        "text": "分类图例"
+      },
+      {
+        "selectedIconPath": "pages/images/know.png",
+        "iconPath": "pages/images/know.png",
+        "pagePath": "pages/know/know",
+        "text": "分类知识"
+      }]  
+  }
+}

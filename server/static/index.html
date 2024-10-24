@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>垃圾分类</title>
+    <script src="jquery-1.11.3.js"></script>
+</head>
+<body>
+<div>
+	<div>
+		<input type="file" name="photo" id="photo" value="" placeholder="上传图片">
+		<input type="button" onclick="postData();" value="上传图片" name="" style="width:100px;height:25px;">
+	</div>
+	<br />
+	<div>
+		<img id="resultImg" src="" />
+	</div>
+</div>
+</body>
+<script type="text/javascript">
+function postData(){
+    var formData = new FormData();
+    formData.append("file", $("#photo")[0].files[0]);
+    $.ajax({
+        url:'http://127.0.0.1:8001/upload', /*接口域名地址*/
+        type:'post',
+        data: formData,
+        contentType: false,
+        processData: false,
+        success:function(res) {
+            console.log(res);
+            if (res.status == 1) {
+            	var d = new Date();
+                $("#resultImg").attr('src', res.draw_url + '?id=' + d.getTime())
+            } else {
+                alert('失败');
+            }
+        }
+    })
+}
+</script>
+</html>

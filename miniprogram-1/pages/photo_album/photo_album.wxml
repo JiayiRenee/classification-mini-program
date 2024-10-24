@@ -1,0 +1,9 @@
+<!--pages/camera/photo_album.wxml-->
+<view class="container">
+	<view style="width:100%; height: 100%;">
+    <image style="background:#222222; width: 100%; height: 100%;" src="{{src}}" />
+	</view>
+	<view style="width:100%; height: 50px; margin-top: 3px;">
+ 		<button type="primary" width='80%' bindtap="takePhoto">重新选取</button>
+	</view>
+</view>

@@ -1,0 +1,11 @@
+<!--pages/camera/camera.wxml-->
+<view class="container">
+	<view style="width:100%; height: 100%;">
+		<camera wx:if='{{!photoTaken}}' device-position="back" flash="off" binderror="error" style="width: 100%; height: 100%;" />
+    <image wx:if='{{photoTaken}}' style="width: 100%; height: 100%;" src="{{src}}" />
+	</view>
+	<view style="width:100%; height: 50px; margin-top: 3px;">
+ 		<button wx:if='{{!photoTaken}}' type="primary" width='80%' bindtap="takePhoto">开始识别</button>
+		<button wx:if='{{photoTaken}}' type="default" width='80%' bindtap="restartCamera">重新拍照</button>
+	</view>
+</view>

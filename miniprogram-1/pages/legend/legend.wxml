@@ -1,0 +1,8 @@
+<!--pages/legend/legend.wxml-->
+<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" circular="{{circular}}" duration="{{duration}}" style="width:100%; height:100%">
+  <block wx:for="{{phonelist}}" wx:for-item="item" wx:for-index="idx">
+    <swiper-item>
+        <image src="{{item}}" style='position:absolute; width:100%; height:100%;'></image>
+    </swiper-item>
+  </block>
+</swiper>
